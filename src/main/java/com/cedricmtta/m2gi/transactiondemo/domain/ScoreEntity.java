@@ -16,5 +16,6 @@ public class ScoreEntity {
     private int score;
 
     @ManyToOne
+    @EqualsAndHashCode.Exclude
     private StudentEntity student;
 }

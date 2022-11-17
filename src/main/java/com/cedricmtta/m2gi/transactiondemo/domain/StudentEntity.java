@@ -4,10 +4,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -23,4 +22,35 @@ public class StudentEntity {
     @OneToMany(mappedBy = "student")
     @ToString.Exclude
     private Set<ScoreEntity> scores;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    // Meilleure gestion de la relation
+//    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
+//    @ToString.Exclude
+//    private Set<ScoreEntity> scores = new HashSet<>();
+//
+//    public void addScores(ScoreEntity... scores) {
+//        Arrays.stream(scores).forEach(s -> {
+//            s.setStudent(this);
+//            this.scores.add(s);
+//        });
+//    }
 }

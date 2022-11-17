@@ -109,6 +109,22 @@ class TransactionDemoApplicationTests {
         // alice.notes = ?
         System.out.println(aliceAfterSave.getScores());
     }
-    
+
+    // Décomenter StudentEntity et ce test
+//    @Test
+////    @Transactional ou non, cela fonctionnera dans tout les cas
+//    void cas_ideal() {
+//        var alice = new StudentEntity();
+//        alice.setId(1);
+//        alice.setName("Alice");
+//        
+//        var note = new ScoreEntity();
+//        note.setId(1);
+//        note.setScore(10);
+//        
+//        alice.addScores(note);
+//        
+//        studentRepository.save(alice);
+//    }
     
 }
